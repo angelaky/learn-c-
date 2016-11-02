@@ -31,7 +31,7 @@ namespace ConsoleApplicationFirst
             };
 
             
-            Console.Write("\nEnter 2 coordinates: ");
+            Console.Write("\nEnter 2 coordinates delimeted with space: ");
             string coordinates = Console.ReadLine();
             var coordinateSplit = coordinates.Split(' ');
 
@@ -41,15 +41,12 @@ namespace ConsoleApplicationFirst
             Int32.TryParse(coordinateSplit[1], out coord1);
             array[coord0][coord1]++;
             PrintArray(array);
-
-
         }
 
         static void PrintArray(int[][] arr)
         {
             for (int i = 0; i < arr.Length; i++)
             {
-
                 Console.WriteLine();
                 for (int j = 0; j < arr.Length; j++)
                 {
